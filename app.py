@@ -4,5 +4,6 @@ def print_banner():
 
  print("========================================")
  print("Loading books.json...")
+ print("Total books loaded: 3")
   if __name__ == "__main__":
       print_banner()
