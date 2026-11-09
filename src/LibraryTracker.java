@@ -20,6 +20,7 @@ public class LibraryTracker {
         System.out.println("Searching books.json for title containing: " + keyword);
     }
     public static void removeBook(int id) {
+        if (id <= 0) return;
         System.out.println("Removed book with ID " + id + " from books.json");
     }
     public static void main(String[] args) throws IOException {
