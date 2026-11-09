@@ -9,6 +9,7 @@ public class LibraryTracker {
         System.out.println("========================================");
     }
     public static void addBook(int id, String title, String author) {
+        if  (title == null || title.isEmpty()) return;
         String bookJson = String.format("{\"id\": %d, \"title\": \"%s\", \"author\": \"%s\"}",
                 id, title, author);
         System.out.println("Added book to books.json: " + bookJson);
