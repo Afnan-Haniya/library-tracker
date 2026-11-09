@@ -13,8 +13,14 @@ public class LibraryTracker {
                 id, title, author);
         System.out.println("Added book to books.json: " + bookJson);
     }
-    public static void main(String[] args) {
+    public static void listBooks() throws IOException {
+        List<String> lines = Files.readAllLines(Paths.get("books.json"));
+        System.out.println("--- Books List ---");
+        for (String line : lines) {
+            System.out.println(line);
+        }
+    }
+    public static void main(String[] args) throws IOException {
         print_banner();
         addBook(4, "Design Patterns", "Erich Gamma");
-    }
-}
+        listBooks();     } }
