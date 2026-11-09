@@ -23,6 +23,8 @@ public class LibraryTracker {
         System.out.println("Removed book with ID " + id + " from books.json");
     }
     public static void main(String[] args) throws IOException {
+        searchBook("Clean Code");
+        removeBook(2);
         print_banner();
         addBook(4, "Design Patterns", "Erich Gamma");
         listBooks();
